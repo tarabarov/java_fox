@@ -5,24 +5,25 @@ public class MyFirstProgram {
   public static void main(String[] args) {
 
     hello("Julia");
-
     hello("Boris");
-
     hello("Achilles");
-
     int a = 5;
-
     multiply(5, 3);
 
-    
-
     volume(2, 3, 4);
-
     text("privet", 2, 4 );
-
       System.out.println(2+ "+" +3+ "/" +4);
     test(2,3,4);
 
+
+      Square S1 = new Square();
+      S1.storona_a = 2;
+
+      Square S2 = new Square();
+      S2.storona_a = 5;
+
+      Square S3 = new Square();
+      S3.storona_a = 10;
 
 
   }
