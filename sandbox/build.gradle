@@ -2,7 +2,7 @@ apply plugin: 'java'
 apply plugin: 'application'
 /*mainClassName = "MyFirstProgram"*/
 
-mainClassName = "MyFirstTask"
+mainClassName = "Fibonacci"
 
 repositories {
     mavenCentral()
