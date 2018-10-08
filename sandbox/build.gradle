@@ -1,3 +1,16 @@
 apply plugin: 'java'
 apply plugin: 'application'
-mainClassName = "MyFirstProgram"
+/*mainClassName = "MyFirstProgram"*/
+
+mainClassName = "MyFirstTask"
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    compile 'org.testng:testng:7.0.0-beta1'
+
+}
+

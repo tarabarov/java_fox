@@ -4,27 +4,24 @@ public class MyFirstProgram {
 
   public static void main(String[] args) {
 
-    hello("Julia");
-    hello("Boris");
-    hello("Achilles");
-    int a = 5;
-    multiply(5, 3);
+      hello("Julia");
+      hello("Boris");
+      hello("Achilles");
+      int a = 5;
+      multiply(5, 3);
 
-    volume(2, 3, 4);
-    text("privet", 2, 4 );
-      System.out.println(2+ "+" +3+ "/" +4);
-    test(2,3,4);
+      volume(2, 3, 4);
+      text("privet", 2, 4);
+      System.out.println(2 + "+" + 3 + "/" + 4);
+      test(2, 3, 4);
 
 
-      Square S1 = new Square();
-      S1.storona_a = 2;
+      Square s = new Square(5);
+      System.out.println("Площадь квадрата со стороной" + s.storona_a + "=" + s.area());
 
-      Square S2 = new Square();
-      S2.storona_a = 5;
 
-      Square S3 = new Square();
-      S3.storona_a = 10;
-
+      Rectangle r = new Rectangle(4, 6);
+      System.out.println("Площадь прямоугольника со стороной" + r.storona_a + "и" + r.storona_b + "=" + r.area());
 
   }
 
@@ -55,6 +52,8 @@ public class MyFirstProgram {
 
 
 
+
+
 /*
   public static void hello() l{
       System.out.println("Hello, world");
@@ -69,3 +68,4 @@ public class MyFirstProgram {
     }
 */
 }
+
