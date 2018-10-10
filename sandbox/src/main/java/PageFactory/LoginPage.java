@@ -1,28 +1,32 @@
 package PageFactory;
 
-        import org.openqa.selenium.By;
-        import org.openqa.selenium.WebDriver;
-        import org.openqa.selenium.WebElement;
-        import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
 
 public class LoginPage{
     private WebDriver webDriver;
     @FindBy(id = "email")
     private WebElement emailBox;
+
     @FindBy(id = "passwd")
     private WebElement passBox;
+
     @FindBy(xpath = "//*[@id=\"SubmitLogin\"]/span")
     private WebElement submitButton;
 
 
-    public void enterUserName(String email){
+    public LoginPage enterUserName(String email){
         emailBox.clear();
         emailBox.sendKeys(email);
-        //webDriver.findElement(By.id("email")).sendKeys(email);
+        return new LoginPage(webDriver);
     }
-    public void enterPassword(String passwd){
+    public LoginPage enterPassword(String passwd){
         passBox.clear();
         passBox.sendKeys(passwd);
+        return new LoginPage(webDriver);
     }
     public void clickSigninBtn(){
         submitButton.click();
@@ -33,5 +37,7 @@ public class LoginPage{
         clickSigninBtn();
         return new AccountPage(webDriver);
     }
-    public LoginPage(WebDriver webDriver){this.webDriver = webDriver;}
+    public LoginPage(WebDriver webDriver){
+        PageFactory.initElements(webDriver, LoginPage.class);
+    }
 }
